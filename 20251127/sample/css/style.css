@@ -1,0 +1,143 @@
+@charset "UTF-8";
+@import url(reset.css);
+
+/* =====================================
+   COMMON
+===================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.8;
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-size: 16px;
+  letter-spacing: .2em;
+  background: #f9f0e7;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =====================================
+   Main Visual
+===================================== */
+
+#main-visual {
+  width: 100%;
+  height: 100vh;
+  background: url(images/kyoto_main.jpg) center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+#main-visual .inner {
+  color: #fff;
+  margin-bottom: 80px;
+}
+
+/* =====================================
+   Sections
+===================================== */
+
+section + section {
+  margin-top: 160px;
+}
+
+.bg {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bg img {
+  width: calc((750px + (100% - 750px) / 2));
+  margin-bottom: 80px;
+}
+
+.bg.right img {
+  margin-left: auto;
+}
+
+.bg.left img {
+  margin-right: auto;
+}
+
+.inner {
+  width: 750px;
+  margin: auto;
+}
+
+h2 span {
+  color: #546e7a;
+  font-family: 'Tangerine', cursive;
+  font-size: 40px;
+}
+
+/* =====================================
+   Slide-in Banner
+===================================== */
+
+.slide-in {
+  width: 100%;
+  height: 400px;
+  margin-top: 100px;
+  background: linear-gradient(90deg, black 50%, white 100%);
+  color: #fff;
+  transform: translateX(-100%);
+  opacity: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  padding-left: 80px;
+  transition: all .6s;
+}
+
+.slide-in .more {
+  position: absolute;
+  bottom: 50px;
+  left: 80px;
+  padding: 10px;
+  border: 2px solid #fff;
+  font-size: 14px;
+  transition: all .6s;
+}
+
+.slide-in img {
+  position: absolute;
+  right: 0;
+  height: 400px;
+}
+
+/* show時 */
+.slide-in.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-in.show:hover {
+  opacity: .8;
+}
+
+.slide-in.show:hover .more {
+  background: #fff;
+  color: #231815;
+}
+
+/* =====================================
+   Footer
+===================================== */
+
+footer {
+  width: 100%;
+  background: #fcc8c5;
+  text-align: center;
+  padding: 10px 0;
+}
